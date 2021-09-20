@@ -5,9 +5,9 @@ $(document).ready(function() {
         let lock = $(this).scrollTop();
         let positionFactor = lock*0.3<40 ? 0 : lock*0.3;
         let position = positionFactor>=78.4000015258789 ? 78.4000015258789 : positionFactor;
-        let fadingFactor = lock> lock/300;
+        // let fadingFactor = lock> lock/300;
 
-        let lockPos = lock*0.025;
+        let lockPos = lock*0.01;
 
 
       let scaleFactor = lockPos<1 ? 1 : lockPos>=1.76 ? 1.76 : lockPos;
@@ -15,11 +15,10 @@ $(document).ready(function() {
         $(".car").css("top", position);
         $(".car").css("transform", 'rotate('+lock+'+'+deg+')');
 
-        $(".new-car").css("opacity", fadingFactor);
+        // $(".new-car").css("opacity", fadingFactor);
     })
 }
 )
-
 
 
 
@@ -59,12 +58,9 @@ gsap.to('.side-car', {duration: 1.5, x:'59%'});
 gsap.to('.new-car', {
     scrollTrigger:{
         trigger: '.side-car',
-        start: "bottom 260",
+        start: "bottom 290",
         toggleAction: 'restart pause reverse pause',
-        scrub: true,
-
-    
-
+        scrub: 1,
     },
     opacity:1
 })
@@ -72,7 +68,7 @@ gsap.to('.new-car', {
 gsap.to('.car3', {
     scrollTrigger:{
         trigger: '.new-car',
-        start: "top -300",
+        start: "top -500",
 
         toggleAction: 'restart pause reverse pause',
         scrub: 2,
@@ -84,7 +80,7 @@ gsap.to('.car3', {
 gsap.to('.car4', {
     scrollTrigger:{
         trigger: '.car3',
-        start: "top -500",
+        start: "top -1500",
 
         toggleAction: 'restart pause reverse pause',
         scrub: 2,
@@ -96,7 +92,7 @@ gsap.to('.car4', {
 gsap.to('.car5', {
     scrollTrigger:{
         trigger: '.car4',
-        start: "top -800",
+        start: "top -2500",
 
         toggleAction: 'restart pause reverse pause',
         scrub: 2,
@@ -108,7 +104,7 @@ gsap.to('.car5', {
 gsap.to('.car6', {
     scrollTrigger:{
         trigger: '.car5',
-        start: "top -1100",
+        start: "top -3500",
 
         toggleAction: 'restart pause reverse pause',
         scrub: 2,
@@ -120,7 +116,7 @@ gsap.to('.car6', {
 gsap.to('.car7', {
     scrollTrigger:{
         trigger: '.car6',
-        start: "top -1400",
+        start: "top -4500",
 
         toggleAction: 'restart pause reverse pause',
         scrub: 2,
@@ -132,7 +128,7 @@ gsap.to('.car7', {
 gsap.to('.car8', {
     scrollTrigger:{
         trigger: '.car7',
-        start: "top -1450",
+        start: "top -5500",
 
         toggleAction: 'restart pause reverse pause',
         scrub: 3,
@@ -144,7 +140,7 @@ gsap.to('.car8', {
 gsap.to('.car9', {
     scrollTrigger:{
         trigger: '.car8',
-        start: "top -1500",
+        start: "top -6000",
 
         toggleAction: 'restart pause reverse pause',
         scrub: 1,
@@ -156,7 +152,7 @@ gsap.to('.car9', {
 gsap.to('.car10', {
     scrollTrigger:{
         trigger: '.car9',
-        start: "top -1550",
+        start: "top -6500",
 
         toggleAction: 'restart pause reverse pause',
         scrub: 1,
@@ -168,7 +164,7 @@ gsap.to('.car10', {
 gsap.to('.car11', {
     scrollTrigger:{
         trigger: '.car10',
-        start: "top -1600",
+        start: "top -7000",
 
         toggleAction: 'restart pause reverse pause',
         scrub:1,
@@ -180,7 +176,7 @@ gsap.to('.car11', {
 gsap.to('.car12', {
     scrollTrigger:{
         trigger: '.car11',
-        start: "top -1650",
+        start: "top -7500",
 
         toggleAction: 'restart pause reverse pause',
         scrub: 1,
@@ -192,7 +188,7 @@ gsap.to('.car12', {
 gsap.to('.car13', {
     scrollTrigger:{
         trigger: '.car12',
-        start: "top -2000",
+        start: "top -8000",
 
         toggleAction: 'restart pause reverse pause',
         scrub: 1,
@@ -204,7 +200,7 @@ gsap.to('.car13', {
 gsap.to('.car14', {
     scrollTrigger:{
         trigger: '.car13',
-        start: "top -2100",
+        start: "top -8500",
 
         toggleAction: 'restart pause reverse pause',
         scrub: 1,
@@ -216,7 +212,7 @@ gsap.to('.car14', {
 gsap.to('.car15', {
     scrollTrigger:{
         trigger: '.car14',
-        start: "top -2200",
+        start: "top -9000",
 
         toggleAction: 'restart pause reverse pause',
         scrub:1,
