@@ -63,9 +63,8 @@ gsap.to('.new-car', {
         toggleAction: 'restart pause reverse pause',
         scrub: true,
 
-        markers: {
+    
 
-        }
     },
     opacity:1
 })
